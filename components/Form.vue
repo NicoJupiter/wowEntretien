@@ -15,10 +15,10 @@
     </div>
     <div class="form__row">
       <span class="form__row__label">When can we meet ?</span>
-      <div class="form__row__dateList">
-        <span>Asap</span>
-        <span>Morning</span>
-        <span class="form__row__dateList--actif">Afternoon</span>
+      <div class="form__row__dateList" v-for="i in 1">
+        <span ref="dateListItem">Asap</span>
+        <span ref="dateListItem">Morning</span>
+        <span class="form__row__dateList--actif" ref="dateListItem">Afternoon</span>
       </div>
     </div>
     <div class="form__row">
@@ -28,17 +28,77 @@
       </div>
     </div>
     <div class="form__row">
-     <div class="form__row__btn">
+     <div class="form__row__btn" ref="btn">
        <img src="~/assets/svg/arrowRight.svg" alt="arrow" ref="arrowSvg">
-       <span>Send</span>
+       <span ref="spanBtn">Send</span>
      </div>
     </div>
   </div>
 </template>
 
 <script>
+import gsap from 'gsap'
 export default {
-name: "Form"
+  name: "Form",
+  data() {
+    return {
+      mouseEnterHandler: this.mouseEnter.bind(this),
+      mouseLeaveHandler: this.mouseLeave.bind(this),
+      mouseClickHandler: this.mouseClick.bind(this)
+    }
+  },
+  mounted() {
+    this.$refs.btn.addEventListener('mouseenter', this.$data.mouseEnterHandler)
+    this.$refs.btn.addEventListener('mouseleave' ,this.$data.mouseLeaveHandler)
+    this.$refs.btn.addEventListener('click' ,this.$data.mouseClickHandler)
+
+    this.$refs.dateListItem.forEach(item => {
+      let dateListClickHandler = this.dateListClick.bind(this, item)
+      item.addEventListener('click', dateListClickHandler)
+    })
+  },
+  methods: {
+    dateListClick(item) {
+      this.$refs.dateListItem.forEach(el => {
+       el.classList.remove('form__row__dateList--actif')
+      })
+      item.classList.add('form__row__dateList--actif')
+    },
+    mouseEnter() {
+      gsap.to(this.$refs.arrowSvg, {
+        left: 12 + 'rem'
+      })
+      gsap.to(this.$refs.spanBtn, {
+        left: 7 + 'rem'
+      })
+    },
+    mouseLeave() {
+      gsap.to(this.$refs.arrowSvg, {
+        left: 7 + 'rem'
+      })
+      gsap.to(this.$refs.spanBtn, {
+        left: 12 + 'rem'
+      })
+    },
+    mouseClick() {
+      console.log('click')
+      gsap.to(this.$refs.btn, {
+        backgroundColor: '#202124'
+      })
+      gsap.to(this.$refs.spanBtn, {
+        color: '#F9F9F9',
+        left: 50 + '%',
+      })
+      this.$refs.spanBtn.innerHTML = 'Send !'
+      this.$refs.btn.removeEventListener('mouseenter', this.$data.mouseEnterHandler)
+      this.$refs.btn.removeEventListener('mouseleave',this.$data.mouseLeaveHandler)
+    }
+  },
+  beforeDestroy() {
+    this.$refs.btn.removeEventListener('mouseenter', this.$data.mouseEnterHandler)
+    this.$refs.btn.removeEventListener('mouseleave',this.$data.mouseLeaveHandler)
+    this.$refs.btn.removeEventListener('click' ,this.$data.mouseClickHandler)
+  }
 }
 </script>
 
@@ -67,6 +127,7 @@ name: "Form"
           font-size: 2rem;
           color: $C-grey;
           margin-right: 2.5rem;
+          transition: all .5s;
         }
         &--actif {
           color: $C-lightBlack !important;
@@ -93,12 +154,26 @@ name: "Form"
       &__btn {
        font-size: 2.4rem;
         border: .24rem solid $C-lightBlack;
-        padding: .8rem 3.8rem;
         display: inline-block;
         border-radius: 7rem;
-
+        width: 20rem;
+        height: 5rem;
+        position: relative;
+        cursor: pointer;
+        span {
+          position: absolute;
+          left: 12rem;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          pointer-events: none;
+        }
         img {
+          position: absolute;
+          left: 7rem;
+          top: 50%;
+          transform: translate(-50%, -50%);
           width: 3.5rem;
+          pointer-events: none;
         }
       }
     }
