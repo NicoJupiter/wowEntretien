@@ -4,20 +4,22 @@
       Some of our clients
     </div>
     <div class="clients__list">
-      list
+     <ClientList/>
     </div>
   </div>
 </template>
 
 <script>
+import ClientList from "~/components/ClientList";
 export default {
-  name: "Clients"
+  name: "Clients",
+  components: {ClientList}
 }
 </script>
 
 <style scoped lang="scss">
   .clients {
-    padding: 12rem 0;
+    padding: 12rem 18.5rem;
     box-sizing: border-box;
     background-color: $C-lighWhite;
     &__title {
@@ -28,7 +30,6 @@ export default {
     }
     &__list {
       height: 32rem;
-      background-color: pink;
     }
   }
 </style>
