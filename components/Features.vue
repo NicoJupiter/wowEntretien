@@ -3,7 +3,9 @@
     <div class="features__title">
       Featured wowrk
     </div>
-    <div class="features__list"></div>
+    <div class="features__list">
+      <DragSlider/>
+    </div>
     <div class="features__link">
       Discover all works
     </div>
@@ -11,8 +13,10 @@
 </template>
 
 <script>
+import DragSlider from "~/components/DragSlider";
 export default {
-  name: "Features"
+  name: "Features",
+  components: {DragSlider}
 }
 </script>
 
@@ -34,8 +38,6 @@ export default {
       color: $C-grey;
     }
     &__list {
-      height: 10rem;
-      background-color: pink;
       margin-bottom: 6.2rem;
     }
     &__link {
