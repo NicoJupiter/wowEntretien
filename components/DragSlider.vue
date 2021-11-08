@@ -5,7 +5,7 @@
         <img src="~/assets/image/dragSlider3.png" alt="">
       </div>
       <div class="dragSlider__wrapper--item">
-        <img src="~/assets/image/dragSlider3.png" alt="">
+        <img src="~/assets/image/dragSlider4.png" alt="">
       </div>
       <div class="dragSlider__wrapper--item">
         <img src="~/assets/image/dragSlider3.png" alt="">
@@ -14,16 +14,16 @@
         <img src="~/assets/image/dragSlider3.png" alt="">
       </div>
       <div class="dragSlider__wrapper--item">
-        <img src="~/assets/image/dragSlider3.png" alt="">
+        <img src="~/assets/image/dragSlider4.png" alt="">
       </div>
       <div class="dragSlider__wrapper--item">
         <img src="~/assets/image/dragSlider3.png" alt="">
       </div>
       <div class="dragSlider__wrapper--item">
-        <img src="~/assets/image/dragSlider3.png" alt="">
+        <img src="~/assets/image/dragSlider4.png" alt="">
       </div>
       <div class="dragSlider__wrapper--item">
-        <img src="~/assets/image/dragSlider3.png" alt="">
+        <img src="~/assets/image/dragSlider4.png" alt="">
       </div>
       <div class="dragSlider__wrapper--item">
         <img src="~/assets/image/dragSlider3.png" alt="">
