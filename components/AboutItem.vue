@@ -61,7 +61,7 @@ export default {
   methods: {
     clickEvent(item) {
       this.$nuxt.$emit('aboutItem::click', item.dataset.index)
-      /*this.$refs.aboutItemLink.forEach(item => {
+      this.$refs.aboutItemLink.forEach(item => {
         gsap.to(item, {
           opacity: .5,
           duration: .5
@@ -70,7 +70,7 @@ export default {
       gsap.to(this.$refs.aboutItemLink[item.dataset.index], {
         opacity: 1,
         duration: .5
-      })*/
+      })
     }
   },
   beforeDestroy() {
@@ -91,17 +91,33 @@ export default {
   width: 100%;
   height: 100%;
   display: flex;
+  @include breakpoint(xs) {
+    flex-direction: column;
+  }
   &__image {
     width: 40.9rem;
     height: 32.6rem;
     margin-top: 4.6rem;
     margin-right: 1.6rem;
+    @include breakpoint(xs) {
+      width: 100%;
+      margin-bottom: 2rem;
+      height: auto;
+    }
+    img {
+      @include breakpoint(xs) {
+        width: 100%;
+      }
+    }
   }
   &__content {
     &__list {
       margin-left: 2.7rem;
       margin-bottom: 3.1rem;
       display: flex;
+      @include breakpoint(xs) {
+       display: none;
+      }
       &__item {
         font-size: 2rem;
         color: $C-white;
@@ -123,6 +139,9 @@ export default {
       width: 80%;
       font-family: $F-main;
       font-weight: $FW-bold;
+      @include breakpoint(xs) {
+        font-size: 2rem;
+      }
     }
     &__link {
       span {

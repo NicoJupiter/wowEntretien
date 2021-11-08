@@ -26,6 +26,9 @@ name: "Citation",
   .citation {
     padding-top: 10rem;
     box-sizing: border-box;
+    @include breakpoint(xs) {
+      padding-top: 1rem;
+    }
     &__text {
       font-size: 5.6rem;
       width: 50%;
@@ -34,21 +37,36 @@ name: "Citation",
       font-family: $F-main;
       font-weight: bold;
       color: $C-lightBlack;
+      @include breakpoint(xs) {
+        font-size: 4.6rem;
+        width: 100%;
+        margin-left: 0;
+
+        padding-left: 3rem;
+        padding-right: 3rem;
+      }
     }
     &__link {
       font-size: 2.4rem;
       margin-left:  18.5rem;
       font-family: $F-main;
       font-weight: bold;
-
       color: $C-lightBlack;
       span {
         margin-left: 1rem;
+      }
+      @include breakpoint(xs) {
+        margin-left: 0;
+        padding-left: 3rem;
+        padding-right: 3rem;
       }
     }
     &__img {
       height: 62.2rem;
       margin-top: 12rem;
+      @include breakpoint(xs) {
+        height: 25rem;
+      }
       img {
         height: 100%;
         width: 100%;

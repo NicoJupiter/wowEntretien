@@ -185,6 +185,9 @@ export default {
       &--item {
         img {
           pointer-events: none;
+          @include breakpoint(xs) {
+            height: 57rem;
+          }
         }
         &:not(:last-child) {
           margin-right: 2rem;

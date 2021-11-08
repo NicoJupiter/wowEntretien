@@ -46,14 +46,23 @@ name: "Form"
   .form {
     &__row {
       margin-top: 9.4rem;
+      @include breakpoint(xs) {
+        &:last-child {
+          text-align: center;
+        }
+      }
       &__label {
         font-size: 2.4rem;
         font-weight: $FW-bold;
         color: $C-lightBlack;
         margin-right: 5rem;
+
       }
       &__dateList {
         display: inline-block;
+        @include breakpoint(xs) {
+          margin-top: 2.7rem;
+        }
         span {
           font-size: 2rem;
           color: $C-grey;
@@ -94,6 +103,7 @@ name: "Form"
       }
     }
     &__rowInput {
+
       &:not(:last-child) {
         margin-bottom: 2.75rem;
       }
@@ -102,6 +112,7 @@ name: "Form"
         font-weight: $FW-bold;
         color: $C-lightBlack;
         margin-right: 1rem;
+
       }
       span {
         font-size: 2.4rem;
@@ -117,6 +128,10 @@ name: "Form"
         font-size: 2.4rem;
         font-weight: $FW-bold;
         color: $C-lightBlack;
+
+        @include breakpoint(xs) {
+          width: 14rem;
+        }
 
         &::placeholder {
           font-size: 2.4rem;

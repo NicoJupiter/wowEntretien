@@ -78,7 +78,7 @@ export default {
       border: .24rem solid $C-white;
     }
     img {
-      width: 3.5rem;
+      width: 3rem;
     }
     span {
       font-size: 2.4rem;

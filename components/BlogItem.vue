@@ -39,6 +39,18 @@ export default {
     display: flex;
     align-items: center;
     flex: 50%;
+    @include breakpoint(xs) {
+      flex: 100%;
+      &:not(:last-child) {
+        margin-bottom: 1rem;
+      }
+      &:nth-child(3),
+      &:nth-child(4),
+      &:nth-child(5),{
+        display: none;
+      }
+
+    }
     &__content {
       margin-left: 2rem;
       &__title {

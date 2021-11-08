@@ -39,12 +39,19 @@ export default {
 
 <style lang="scss" scoped>
   .homepage {
+    overflow: hidden;
     &__1,
     &__2,
     &__7 {
       width: 100vw;
       height: 100vh;
       overflow: hidden;
+    }
+    &__2,
+    &__7{
+      @include breakpoint(xs) {
+        height: auto;
+      }
     }
   }
 </style>

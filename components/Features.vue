@@ -32,6 +32,9 @@ export default {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    @include breakpoint(xs) {
+      padding: 8.6rem 0;
+    }
     &__title {
       margin-bottom: 5.8rem;
       text-align: center;
@@ -39,10 +42,17 @@ export default {
       color: $C-grey;
       font-family: $F-main;
       font-weight: $FW-bold;
+      @include breakpoint(xs) {
+        margin-bottom: 4rem;
+      }
     }
     &__list {
       margin-bottom: 6.2rem;
       margin-left: 18.5rem;
+      @include breakpoint(xs) {
+        margin-left: 3.6rem;
+        margin-bottom: 5.2rem;
+      }
     }
     &__link {
       margin: auto;

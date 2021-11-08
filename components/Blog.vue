@@ -35,18 +35,38 @@ export default {
   .blog {
     padding: 10rem 18.5rem;
     box-sizing: border-box;
+    @include breakpoint(xs) {
+      padding: 8rem 3rem;
+    }
     &__title {
       margin-bottom: 6.1rem;
       font-size: 4.8rem;
       text-align: center;
       color: $C-grey;
+      @include breakpoint(xs) {
+        font-size: 3.6rem;
+      }
     }
     &__center {
-      height: 24.5rem;
       margin-bottom: 5.4rem;
       display: flex;
+      @include breakpoint(xs) {
+        flex-direction: column;
+      }
       &__image {
         margin-right: 5.6rem;
+        @include breakpoint(xs) {
+          width: 31.3rem;
+          height: 31.3rem;
+          margin-right: 0;
+          margin-bottom: 3.1rem;
+        }
+        img {
+          @include breakpoint(xs) {
+            width: 100%;
+            height: 100%;
+          }
+        }
       }
       &__list {
         display: flex;
