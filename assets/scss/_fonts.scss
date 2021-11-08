@@ -1,0 +1,21 @@
+@font-face {
+  font-family: "Supreme";
+  src: url("#{$F-path}/Supreme/Supreme-Regular.otf");
+  font-weight: $FW-normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Supreme";
+  src: url("#{$F-path}/Supreme/Supreme-Light.otf");
+  font-weight: $FW-light;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: "Supreme";
+  src: url("#{$F-path}/Supreme/Supreme-Bold.otf");
+  font-weight: $FW-bold;
+  font-style: normal;
+}

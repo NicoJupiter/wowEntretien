@@ -51,11 +51,14 @@ export default {
       color: $C-white;
       text-align: center;
       &--title {
-        font-size: 5rem;
+        font-size: 7.2rem;
         margin-bottom: 1rem;
+        font-family: $F-main;
+        font-weight: bold;
       }
       &--subTitle {
-        font-size: 2.5rem;
+        font-family: $F-main;
+        font-size: 2.4rem;
       }
     }
     &__bottom {

@@ -73,6 +73,8 @@ export default {
       font-size: 3.6rem;
       margin-bottom: 5.4rem;
       color: $C-white;
+      font-family: $F-main;
+      font-weight: $FW-bold;
     }
     &__center {
       height: 49.6rem;

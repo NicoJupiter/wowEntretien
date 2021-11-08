@@ -28,10 +28,17 @@ name: "Citation"
       width: 50%;
       margin-bottom: 4rem;
       margin-left:  18.5rem;
+      font-family: $F-main;
+      font-weight: bold;
+      color: $C-lightBlack;
     }
     &__link {
       font-size: 2.4rem;
       margin-left:  18.5rem;
+      font-family: $F-main;
+      font-weight: bold;
+
+      color: $C-lightBlack;
     }
     &__img {
       height: 62.2rem;

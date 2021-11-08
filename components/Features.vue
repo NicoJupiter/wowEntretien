@@ -36,14 +36,19 @@ export default {
       text-align: center;
       font-size: 3.2rem;
       color: $C-grey;
+      font-family: $F-main;
+      font-weight: $FW-bold;
     }
     &__list {
       margin-bottom: 6.2rem;
+      margin-left: 18.5rem;
     }
     &__link {
       text-align: center;
       font-size: 2.4rem;
       color: $C-black;
+      font-family: $F-main;
+      font-weight: $FW-bold;
     }
   }
 </style>

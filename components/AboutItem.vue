@@ -103,6 +103,8 @@ export default {
         font-size: 2rem;
         color: $C-white;
         opacity: .5;
+
+        font-family: $F-main;
         &:not(:last-child) {
           margin-right: 6rem;
         }
@@ -116,10 +118,14 @@ export default {
       color: $C-white;
       margin-bottom: 3.2rem;
       width: 80%;
+      font-family: $F-main;
+      font-weight: $FW-bold;
     }
     &__link {
       font-size: 2.4rem;
       color: $C-white;
+      font-family: $F-main;
+      font-weight: $FW-bold;
     }
   }
 }
