@@ -5,7 +5,8 @@
       who kick your butt and rock your world taking care of everything and anything.
     </div>
     <div class="citation__link">
-      who are the wowriorrs
+      <Link :is-circle-label=true label="" :is-white=false />
+      <span>who are the wowriorrs</span>
     </div>
     <div class="citation__img">
       <img src="~/assets/image/team.png" alt="">
@@ -14,8 +15,10 @@
 </template>
 
 <script>
+import Link from "~/components/Link";
 export default {
-name: "Citation"
+name: "Citation",
+  components: {Link}
 }
 </script>
 
@@ -39,6 +42,9 @@ name: "Citation"
       font-weight: bold;
 
       color: $C-lightBlack;
+      span {
+        margin-left: 1rem;
+      }
     }
     &__img {
       height: 62.2rem;

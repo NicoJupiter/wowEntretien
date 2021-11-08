@@ -22,7 +22,8 @@
         {{content}}
       </div>
       <div class="aboutItem__content__link">
-        Let's meet
+        <Link :is-circle-label=true label="" :is-white=true />
+        <span>Let's meet</span>
       </div>
     </div>
   </div>
@@ -30,9 +31,11 @@
 
 <script>
 import gsap from 'gsap'
+import Link from "~/components/Link";
 
 export default {
   name: "AboutItem",
+  components: {Link},
   props: {
     imageUrl: {
       type:String,
@@ -122,10 +125,13 @@ export default {
       font-weight: $FW-bold;
     }
     &__link {
-      font-size: 2.4rem;
-      color: $C-white;
-      font-family: $F-main;
-      font-weight: $FW-bold;
+      span {
+        font-size: 2.4rem;
+        color: $C-white;
+        font-family: $F-main;
+        font-weight: $FW-bold;
+        margin-left: 1rem;
+      }
     }
   }
 }

@@ -29,7 +29,8 @@
     </div>
     <div class="form__row">
      <div class="form__row__btn">
-       Send
+       <img src="~/assets/svg/arrowRight.svg" alt="arrow" ref="arrowSvg">
+       <span>Send</span>
      </div>
     </div>
   </div>
@@ -83,9 +84,13 @@ name: "Form"
       &__btn {
        font-size: 2.4rem;
         border: .24rem solid $C-lightBlack;
-        padding: .8rem 4.8rem;
+        padding: .8rem 3.8rem;
         display: inline-block;
         border-radius: 7rem;
+
+        img {
+          width: 3.5rem;
+        }
       }
     }
     &__rowInput {

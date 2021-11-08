@@ -17,16 +17,17 @@
       </div>
     </div>
     <div class="blog__link">
-      Click for exclusive contents
+      <Link :is-circle-label=false label="Click for exclusive content" :is-white=false />
     </div>
   </div>
 </template>
 
 <script>
 import BlogItem from "~/components/BlogItem";
+import Link from "~/components/Link";
 export default {
   name: "Blog",
-  components: {BlogItem}
+  components: {Link, BlogItem}
 }
 </script>
 
@@ -54,8 +55,7 @@ export default {
       }
     }
     &__link {
-      font-size: 2.4rem;
-      color: $C-black;
+      margin: auto;
       text-align: center;
     }
   }

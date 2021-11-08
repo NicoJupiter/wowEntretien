@@ -7,16 +7,17 @@
       <DragSlider/>
     </div>
     <div class="features__link">
-      Discover all works
+     <Link :is-circle-label=false label="Discover all works" :is-white=false />
     </div>
   </div>
 </template>
 
 <script>
 import DragSlider from "~/components/DragSlider";
+import Link from "~/components/Link";
 export default {
   name: "Features",
-  components: {DragSlider}
+  components: {Link, DragSlider}
 }
 </script>
 
@@ -44,11 +45,7 @@ export default {
       margin-left: 18.5rem;
     }
     &__link {
-      text-align: center;
-      font-size: 2.4rem;
-      color: $C-black;
-      font-family: $F-main;
-      font-weight: $FW-bold;
+      margin: auto;
     }
   }
 </style>
