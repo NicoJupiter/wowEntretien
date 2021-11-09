@@ -41,7 +41,6 @@ export default {
   .homepage {
     overflow: hidden;
     &__1,
-    &__2
     {
       width: 100vw;
       height: 100vh;
