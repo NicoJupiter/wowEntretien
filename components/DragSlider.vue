@@ -196,10 +196,11 @@ export default {
     }
 
     &__line {
-      margin: auto;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
       width: 20rem;
       height: .25rem;
-      position: relative;
       background-color: $C-grey;
       &--subLine {
         position: absolute;
